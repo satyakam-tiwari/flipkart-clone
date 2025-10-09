@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Flipkart Clone - Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo" onclick="window.location.href='index.html'">Flipkart</div>
+    <input type="text" placeholder="Search for Products, Brands and more" class="search-bar" />
+    <div class="nav-icons">
+      <button onclick="goToOrders()">My Orders</button>
+      <button onclick="toggleCart()">Cart (<span id="cart-count">0</span>)</button>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="main-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3>Categories</h3>
+      <ul>
+        <li onclick="filterCategory('All')">All</li>
+        <li onclick="filterCategory('Mobiles')">Mobiles</li>
+        <li onclick="filterCategory('Laptops')">Laptops</li>
+        <li onclick="filterCategory('Headphones')">Headphones</li>
+      </ul>
+    </aside>
+
+    <!-- Products Grid -->
+    <section class="products" id="products-grid">
+      <!-- populated by JS -->
+    </section>
+  </main>
+
+  <!-- Cart Panel -->
+  <div class="cart-panel" id="cart-panel" aria-hidden="true">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <h3>Total: ₹<span id="total">0</span></h3>
+    <div class="cart-actions">
+      <button onclick="goToCheckout()" class="yellow-btn">Proceed to Checkout</button>
+      <button onclick="toggleCart()">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
