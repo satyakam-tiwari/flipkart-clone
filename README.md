@@ -5,7 +5,7 @@ The project replicates the look and feel of Flipkart, including the **navbar, si
 
 All product images are fetched from **online links**, so no local uploads are required.  
 
----
+ visit https://satyakam180.github.io/flipkart-clone/
 
 ## Features
 
